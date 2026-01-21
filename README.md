@@ -39,8 +39,8 @@ graph TD
     DUT -- Output Data --> Host_Agent
     
     Host_Agent -- Monitor --> Scoreboard
-
-
+    UART_Agent -- Monitor --> Scoreboard
+```
 
 ·DUT: 8-bit Data, No Parity, 1 Stop Bit (8N1).
 
@@ -97,4 +97,4 @@ make clean
 📊 验证结果 (Simulation Results)
 
 
-    UART_Agent -- Monitor --> Scoreboard
+
