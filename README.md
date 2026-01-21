@@ -42,11 +42,11 @@ graph TD
 
 
 
-DUT: 8-bit Data, No Parity, 1 Stop Bit (8N1).
+·DUT: 8-bit Data, No Parity, 1 Stop Bit (8N1).
 
-Driver: 实现了波特率发生逻辑，模拟真实的异步传输时序。
+·Driver: 实现了波特率发生逻辑，模拟真实的异步传输时序。
 
-Monitor: 实现了基于过采样 (Oversampling) 的中心对齐采样逻辑，抗干扰能力强。
+·Monitor: 实现了基于过采样 (Oversampling) 的中心对齐采样逻辑，抗干扰能力强。
 
 📂 文件结构 (File Structure)
 Plaintext
