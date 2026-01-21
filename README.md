@@ -50,7 +50,6 @@ graph TD
 
 ## 📂 文件结构 (File Structure)
 
-Plaintext
 
 ```
 .
