@@ -4,12 +4,8 @@
 //  Create Date:  2026-01-19 11:52:26
 //  Version:      No Git Repo
 //  Description:  IC code
-//  Modify Log:   [开始记录修改日志]
+//  Modify Log:   [begin]
 //----------------------------------------------------------------------
-// ---------------------------------------------------------
-// File Name: uart_tx.v
-// Description: UART Transmitter (8N1)
-// ---------------------------------------------------------
 module uart_tx (
     input  wire       clk,
     input  wire       rst_n,
