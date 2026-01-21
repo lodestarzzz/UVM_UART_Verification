@@ -1,6 +1,6 @@
 # UVM Verification Environment for UART IP
 
-![Status](https://img.shields.io/badge/Status-Completed-green)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 ![Language](https://img.shields.io/badge/Language-SystemVerilog%2FVerilog-blue)
 ![Framework](https://img.shields.io/badge/Framework-UVM-orange)
 
@@ -39,4 +39,59 @@ graph TD
     DUT -- Output Data --> Host_Agent
     
     Host_Agent -- Monitor --> Scoreboard
+DUT: 8-bit Data, No Parity, 1 Stop Bit (8N1).
+
+Driver: 实现了波特率发生逻辑，模拟真实的异步传输时序。
+
+Monitor: 实现了基于过采样 (Oversampling) 的中心对齐采样逻辑，抗干扰能力强。
+
+📂 文件结构 (File Structure)
+Plaintext
+
+.
+├── rtl/                # Design Source Code (UART IP)
+│   ├── uart_top.v
+│   ├── uart_rx.v
+│   └── uart_tx.v
+├── uvm_tb/             # UVM Verification Environment
+│   ├── agents/         # Agents (Driver, Monitor, Sequencer)
+│   ├── env/            # Environment & Scoreboard
+│   ├── tests/          # Test Cases
+│   └── tb_top.sv       # Top Module
+├── sim/                # Simulation Directory
+│   ├── Makefile        # Run scripts
+│   └── filelist.f      # File list
+└── README.md           # Project Documentation
+🚀 如何运行 (How to Run)
+本项目基于 Synopsys VCS 和 Verdi 进行开发。
+
+1. 预备工作
+确保你的服务器环境已安装 VCS 和 UVM 库。
+
+2. 运行仿真
+进入 sim 目录：
+
+Bash
+
+cd sim
+运行编译和仿真 (Run Compilation & Simulation):
+
+Bash
+
+make run
+(默认运行 sanity test，如需运行其他 test，修改 Makefile 或传参)
+
+查看波形 (Open Waveform):
+
+Bash
+
+make wave
+清理垃圾文件 (Clean):
+
+Bash
+
+make clean
+📊 验证结果 (Simulation Results)
+
+
     UART_Agent -- Monitor --> Scoreboard
