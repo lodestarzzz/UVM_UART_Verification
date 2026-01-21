@@ -4,12 +4,8 @@
 //  Create Date:  2026-01-19 11:52:55
 //  Version:      No Git Repo
 //  Description:  IC code
-//  Modify Log:   [开始记录修改日志]
+//  Modify Log:   [begin]
 //----------------------------------------------------------------------
-// ---------------------------------------------------------
-// File Name: uart_top.v
-// Description: Top level wrapper connecting TX, RX and Baud Gen
-// ---------------------------------------------------------
 module uart_top #(
     parameter CLK_FREQ = 50000000,
     parameter BAUD_RATE = 9600
