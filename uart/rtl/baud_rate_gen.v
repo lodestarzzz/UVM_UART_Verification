@@ -4,12 +4,8 @@
 //  Create Date:  2026-01-19 11:52:06
 //  Version:      No Git Repo
 //  Description:  IC code
-//  Modify Log:   [开始记录修改日志]
+//  Modify Log:   [begin]
 //----------------------------------------------------------------------
-// ---------------------------------------------------------
-// File Name: baud_rate_gen.v
-// Description: Generates RX/TX clock enables based on baud rate
-// ---------------------------------------------------------
 module baud_rate_gen #(
     parameter CLK_FREQ = 50000000,
     parameter BAUD_RATE = 9600
