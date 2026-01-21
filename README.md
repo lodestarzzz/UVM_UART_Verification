@@ -48,9 +48,11 @@ graph TD
 
 ·Monitor: 实现了基于过采样 (Oversampling) 的中心对齐采样逻辑，抗干扰能力强。
 
-📂 文件结构 (File Structure)
+## 📂 文件结构 (File Structure)
+
 Plaintext
 
+```
 .
 ├── rtl/                # Design Source Code (UART IP)
 │   ├── uart_top.v
@@ -65,36 +67,57 @@ Plaintext
 │   ├── Makefile        # Run scripts
 │   └── filelist.f      # File list
 └── README.md           # Project Documentation
-🚀 如何运行 (How to Run)
-本项目基于 Synopsys VCS 和 Verdi 进行开发。
+```
 
-1. 预备工作
+---
+
+## 🚀 如何运行 (How to Run)
+
+本项目基于 **Synopsys VCS** 和 **Verdi** 进行开发。
+
+### 1. 预备工作
+
 确保你的服务器环境已安装 VCS 和 UVM 库。
 
-2. 运行仿真
-进入 sim 目录：
+### 2. 运行仿真
+
+进入 `sim` 目录：
 
 Bash
 
+```
 cd sim
-运行编译和仿真 (Run Compilation & Simulation):
+```
+
+- **运行编译和仿真 (Run Compilation & Simulation):**
+    
 
 Bash
 
-make run
-(默认运行 sanity test，如需运行其他 test，修改 Makefile 或传参)
+```
+make all
+```
 
-查看波形 (Open Waveform):
-
-Bash
-
-make wave
-清理垃圾文件 (Clean):
+- **查看波形 (Open Waveform):**
+    
 
 Bash
 
+```
+make verdi
+```
+
+- **清理垃圾文件 (Clean):**
+    
+
+Bash
+
+```
 make clean
-📊 验证结果 (Simulation Results)
+```
 
+---
+
+## 📊 验证结果 (Simulation Results)
 
 
