@@ -1,8 +1,28 @@
-../rtl/baud_rate_gen.v
-../rtl/uart_tx.v
-../rtl/uart_rx.v
-../rtl/uart_top.v
+# ------------------------------------------------
+# 1. RTL
+# ------------------------------------------------
+# UART 
+../rtl/core/baud_rate_gen.v
+../rtl/core/uart_tx.v
+../rtl/core/uart_rx.v
+../rtl/core/uart_top.v
 
-../tb/uart_if.sv
+# APB
+../rtl/apb/apb_uart_top.v
+
+# ------------------------------------------------
+# 2. Interfaces
+# ------------------------------------------------
+../tb/agents/uart_agent/uart_if.sv
+# ../tb/agents/apb_agent/apb_if.sv 
+
+# ------------------------------------------------
+# 3. UVM Package
+# ------------------------------------------------
++incdir+../tb
 ../tb/uart_pkg.sv
-../tb/tb_top.sv
+
+# ------------------------------------------------
+# 4. Top Level
+# ------------------------------------------------
+../tb/top/tb_top.sv
